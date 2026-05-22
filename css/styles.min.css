@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+:root {
+  --color-yellow-dark: #F6C531;
+  --color-yellow: #F8DE8C;
+  --color-white: #FAF7E6;
+  --color-green: #A9B494;
+  --color-green-dark: #587042;
+}
+
+@font-face {
+  font-family: "BohemeFloral";
+  src: url('../fonts/boheme-floral.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "AngellaWhite";
+  src: url('../fonts/angella-white.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "BrightAngels";
+  src: url('../fonts/bright-angels.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+.text-brush {
+  font-family: "BrightAngels";
+  font-size: 8rem;
+  line-height: 4rem;
+  color: var(--color-green-dark);
+}
+.text-header {
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 2.5rem;
+  color: var(--color-yellow);
+}
+.text-subheader {
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+  font-size: .75rem;
+  letter-spacing: .1rem;
+  color: var(--color-green-dark);
+}
+.text-title {
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 2.5rem;
+  color: var(--color-green-dark);
+}
+.text-subtitle {
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+  font-size: .6rem;
+  letter-spacing: .1rem;
+  color: var(--color-green-dark);
+}
+
+.body {
+  background: var(--color-white);
+}
+
+#video {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    z-index: 9999;
+    pointer-events: auto;
+    cursor: pointer;
+    transition: opacity 0.5s ease;
+}
+
+.inicio {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1rem;
+}
+
+.circle {
+  border: 2px solid var(--color-green-dark);
+  border-radius: 50rem;
+  padding: .5rem;
+  width: fit-content;
+  background: var(--color-white);
+}
+
+.rectangle {
+  border: 1px solid var(--color-green-dark);
+  padding: .5rem;
+  width: fit-content;
+}
+
+.chip {
+  background: var(--color-green);
+  border-radius: 5px;
+  padding: 0 .5rem;
+  width: fit-content;
+}
+
+.linev {
+  width: 2px;
+  height: 26rem;
+  content: "";
+  display: inline-block;
+  background-color: var(--color-green);
+  z-index: -1;
+}
+
+.lineh {
+  width: 1.75rem;
+  height: 1px;
+  content: "";
+  display: inline-block;
+  background-color: var(--color-green);
+  margin-right: .5rem;
+}
+
+
+
+
+
+
+.formulario {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.rsvp {
+    background: white;
+    border-radius: 10px;
+    border: 1px solid var(--color-soft-taupe);
+    padding: 1rem;
+}
+
+.fin {
+
+}
+
+
+.progress-bar {
+  background: var(--color-green) !important;
+}
+
+.accordion {
+  --bs-accordion-border-color: none !important;
+}
+.accordion-item {
+  border-top: 1px solid var(--color-green) !important;
+}
+.accordion-button {
+  box-shadow: none !important;
+  color: var(--color-green-dark) !important;
+  background: var(--color-white) !important;
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: .7rem !important;
+  letter-spacing: .1rem;
+  padding: 1rem .5rem !important;
+}
+.accordion-body {
+  color: var(--color-green-dark) !important;
+  background: var(--color-white) !important;
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+  font-size: .6rem;
+  letter-spacing: .1rem;
+  padding: .5rem .5rem 1rem .5rem !important;
+}
+
+
+
+.movimiento {
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: all 0.8s ease;
+}
+.movimiento.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* .slider {
+    width: 100vw;
+    height: 250px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .track {
+    display: flex;
+    width: calc(300px * 6);
+    animation: scroll 15s linear infinite;
+  }
+
+  .track img {
+    width: 300px;
+    height: 250px;
+    object-fit: cover;
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(-300px);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  } */

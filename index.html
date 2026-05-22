@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T&PT</title>
+    <link rel="stylesheet" href="css/styles.min.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+</head>
+<body class="body">
+    <!-- <video muted id="video">
+        <source src="video/inicio.mp4" type="video/mp4">
+    </video> -->
+    <section id="inicio"><!--style="display: none;"-->
+        <div class="inicio">
+            <div class="text-subheader" style="display: flex; justify-content: space-between; margin-bottom: 3rem;">
+                <div>MADRID - 2026</div>
+                <div>INVITACIÓN</div>
+            </div>
+            <div class="text-header" style="text-align: center;">NOS CASAMOS</div>
+            <div class="text-subheader" style="text-align: center; margin-bottom: 2rem;">QUERIDOS AMIGOS Y FAMILIA, NOS CASAMOS. ACOMPÁÑANOS EL 10 DE OCUBRE EN MADRID.</div>
+            <div class="text-brush" style="text-align: center; margin-bottom: 2rem;">Tamara &</div>
+            <div class="text-brush" style="text-align: center;">Pablo Tomás</div>
+            <div style="display: flex; justify-content: center; margin-top: 1rem;">
+                <img
+                    alt="contorno"
+                    src="img/acuarela-sinfondo.png"
+                    style="width: 300px;"/>
+            </div>
+            <div class="text-header" style="text-align: center;">10.10.2026</div>
+        </div>
+    </section>
+    <!-- <section id="inicio"> 
+        <div class="inicio">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 3rem;">
+                <div class="roboto-mono-thin">MADRID - 2026</div>
+                <div class="roboto-mono-thin">INVITACIÓN</div>
+            </div>
+            <div style="display: grid; grid-template-columns: 50% 50%; gap: 1rem;">
+                <div class="outfit-regular">NOS</div>
+                <div class="roboto-mono-thin" style="font-size: .6rem;">QUERIDOS AMIGOS Y FAMILIA, NOS CASAMOS. ACOMPÁÑANOS EL 10 DE OCUBRE EN MADRID.</div>
+            </div>
+            <div class="outfit-regular" style="margin-top: -1rem;">CASAMOS</div>
+            <div class="outfit-regular" style="display: flex; justify-content: end; border-top: 1px solid var(--color-soft-taupe); border-bottom: 1px solid var(--color-soft-taupe); margin: 1rem 0; padding: 1rem 0;">10.10.2026</div>
+            <div class="outfit-regular" style="font-size: 2.9rem;">
+                <div>TAMARA</div>
+                <div style="position: relative; display: flex;">
+                    <div>&</div>
+                    <div style="position: absolute; top: -4rem; right: -1rem;">
+                        <img
+                            alt="contorno"
+                            src="img/acuarela-sinfondo.png"
+                            style="width: 200px;"/>
+                    </div>
+                </div>
+                <div>PABLO TOMÁS</div>
+            </div>
+        </div>
+    </section> -->
+    <section id="cuenta">
+        <div class="inicio">
+            <div class="text-subheader" style="display: flex; align-items: center; border-top: 1px solid var(--color-yellow); margin: 1rem 0; padding-top: 2rem;"><span class="lineh"></span>CUENTA REGRESIVA</div>
+            <div style="display: grid; grid-template-columns: 25% 25% 25% 25%; margin-bottom: 1rem;">
+                <div class="text-title" id="dias"></div>
+                <div class="text-title" id="minutos"></div>
+                <div class="text-title" id="horas"></div>
+                <div class="text-brush" id="segundos" style="color: var(--color-yellow); font-size: 4rem;"></div>
+                <div class="text-subheader" style="font-size: .6rem;">DÍAS</div>
+                <div class="text-subheader" style="font-size: .6rem;">MINUTOS</div>
+                <div class="text-subheader" style="font-size: .6rem;">HORAS</div>
+                <div class="text-subheader" style="font-size: .6rem;">SEGUNDOS</div>
+            </div>
+            <div class="progress" role="progressbar" style="height: 2px">
+                <div class="progress-bar" id="progressbar"></div>
+            </div>
+        </div>
+    </section>
+    <section id="detalles">
+        <div class="inicio">
+            <div class="text-subheader" style="display: flex; align-items: center; border-top: 1px solid var(--color-yellow); margin: 1rem 0; padding-top: 2rem;"><span class="lineh"></span>DETALLES</div>
+            <div class="text-header" style="margin-bottom: 1rem;">
+                <div style="margin-bottom: -1rem;">DETALLES</div>
+                <div>DE LA BODA</div>
+            </div>
+            <div class="text-subheader" style="margin-bottom: -1rem;">FINCA</div>
+            <div>
+                <img
+                    alt="finca"
+                    src="img/finca.png"
+                    style="width: 320px;"/>
+            </div>
+            <div class="text-brush" style="font-size: 5rem;">Finca los Olivos</div>
+            <div class="text-subtitle" style="margin-top: .5rem;">PARAJE CAMPILLO ALTO, 13, 28722, EL VELLÓN</div>
+            <div class="text-subheader" style="display: grid; grid-template-columns: 30% 30% 33%; margin-top: .5rem;">
+                <div style="display: flex; align-items: center;">
+                    <img
+                        alt="schedule"
+                        src="img/schedule.svg"
+                        style="width: 1rem;"/>
+                    <span style="margin-left: .25rem;">13:00H</span>
+                </div>
+                <div style="display: flex; align-items: center;">
+                    <img
+                        alt="location"
+                        src="img/location.svg"
+                        style="width: 1rem;"/>
+                    <span style="text-decoration: underline; margin-left: .25rem;">MAPS</span>
+                </div>
+                <div style="display: flex; align-items: center;">
+                    <img
+                        alt="calendar"
+                        src="img/calendar.svg"
+                        style="width: 1rem;"/>
+                    <span style="text-decoration: underline; margin-left: .25rem;">CALENDARIO</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="planificacion">
+        <div class="inicio">
+            <div class="text-subheader" style="display: flex; align-items: center; border-top: 1px solid var(--color-yellow); margin: 1rem 0; padding-top: 2rem;"><span class="lineh"></span>PLANIFICACIÓN</div>
+            <div class="text-header" style="margin-bottom: 1rem;">
+                <div style="margin-bottom: -1rem;">PROGRAMA</div>
+                <div>DEL DÍA</div>
+            </div>
+            <div style="position: relative;">
+                <div class="linev" style="position: absolute; left: 1.5rem; top: -.5rem;"></div>
+                <div class="movimiento" style="display: flex; align-items: center;">
+                    <div class="circle">
+                        <img
+                            alt="bus"
+                            src="img/bus.svg"
+                            style="width: 2rem;">
+                    </div>
+                    <div style="margin-left: 1rem;">
+                        <div style="display: flex;">
+                            <div class="chip text-subheader" style="font-size: .7rem; color: white;">12:00H</div>
+                            <div class="text-subheader" style="font-weight: 400; font-size: .7rem; margin-left: .5rem;">BUS DE IDA</div>
+                        </div>
+                        <div class="text-subtitle" style="margin-top: .2rem;">Recogida de invitados</div>
+                    </div>
+                </div>
+                <div class="movimiento" style="display: flex; align-items: center; margin-top: .5rem;">
+                    <div class="circle">
+                        <img
+                            alt="bus"
+                            src="img/reception.svg"
+                            style="width: 2rem;">
+                    </div>
+                    <div style="margin-left: 1rem;">
+                        <div style="display: flex;">
+                            <div class="chip text-subheader" style="font-size: .7rem; color: white;">12:30H</div>
+                            <div class="text-subheader" style="font-weight: 400; font-size: .7rem; margin-left: .5rem;">RECEPCIÓN</div>
+                        </div>
+                        <div class="text-subtitle" style="margin-top: .2rem;">Recepción de invitados</div>
+                    </div>
+                </div>
+                <div class="movimiento" style="display: flex; align-items: center; margin-top: .5rem;">
+                    <div class="circle">
+                        <img
+                            alt="bus"
+                            src="img/ceremony.svg"
+                            style="width: 2rem;">
+                    </div>
+                    <div style="margin-left: 1rem;">
+                        <div style="display: flex;">
+                            <div class="chip text-subheader" style="font-size: .7rem; color: white; background: var(--color-yellow);">13:00H</div>
+                            <div class="text-subheader" style="font-weight: 400; font-size: .7rem; margin-left: .5rem;">CEREMONIA</div>
+                        </div>
+                        <div class="text-subtitle" style="margin-top: .2rem;">El momento más especial del día</div>
+                    </div>
+                </div>
+                <div class="movimiento" style="display: flex; align-items: center; margin-top: .5rem;">
+                    <div class="circle">
+                        <img
+                            alt="bus"
+                            src="img/cocktail.svg"
+                            style="width: 2rem;">
+                    </div>
+                    <div style="margin-left: 1rem;">
+                        <div style="display: flex;">
+                            <div class="chip text-subheader" style="font-size: .7rem; color: white;">14:00H</div>
+                            <div class="text-subheader" style="font-weight: 400; font-size: .7rem; margin-left: .5rem;">COCKTAIL</div>
+                        </div>
+                        <div class="text-subtitle" style="margin-top: .2rem;">Aperitivos y bebidas en los jardines</div>
+                    </div>
+                </div>
+                <div class="movimiento" style="display: flex; align-items: center; margin-top: .5rem;">
+                    <div class="circle">
+                        <img
+                            alt="bus"
+                            src="img/dinner.svg"
+                            style="width: 2rem;">
+                    </div>
+                    <div style="margin-left: 1rem;">
+                        <div style="display: flex;">
+                            <div class="chip text-subheader" style="font-size: .7rem; color: white;">16:00H</div>
+                            <div class="text-subheader" style="font-weight: 400; font-size: .7rem; margin-left: .5rem;">CENA</div>
+                        </div>
+                        <div class="text-subtitle" style="margin-top: .2rem;">Banquete a la altura</div>
+                    </div>
+                </div>
+                <div class="movimiento" style="display: flex; align-items: center; margin-top: .5rem;">
+                    <div class="circle">
+                        <img
+                            alt="bus"
+                            src="img/celebration.svg"
+                            style="width: 2rem;">
+                    </div>
+                    <div style="margin-left: 1rem;">
+                        <div style="display: flex;">
+                            <div class="chip text-subheader" style="font-size: .7rem; color: white;">18:00H</div>
+                            <div class="text-subheader" style="font-weight: 400; font-size: .7rem; margin-left: .5rem;">FIESTA</div>
+                        </div>
+                        <div class="text-subtitle" style="margin-top: .2rem;">¡A bailar todo el mundo!</div>
+                    </div>
+                </div>
+                <div class="movimiento" style="display: flex; align-items: center; margin-top: .5rem;">
+                    <div class="circle">
+                        <img
+                            alt="bus"
+                            src="img/bus.svg"
+                            style="width: 2rem;">
+                    </div>
+                    <div style="margin-left: 1rem;">
+                        <div style="display: flex;">
+                            <div class="chip text-subheader" style="font-size: .7rem; color: white;">18:00H</div>
+                            <div class="text-subheader" style="font-weight: 400; font-size: .7rem; margin-left: .5rem;">FIN</div>
+                        </div>
+                        <div class="text-subtitle" style="margin-top: .2rem;">Fin del día</div>
+                    </div>
+                </div>
+            </div>            
+        </div>
+    </section>
+    <section id="preguntas">
+        <div class="inicio">
+            <div class="text-subheader" style="display: flex; align-items: center; border-top: 1px solid var(--color-yellow); margin: 1rem 0; padding-top: 2rem;"><span class="lineh"></span>DUDAS</div>
+            <div class="text-header" style="margin-bottom: 1rem;">
+                <div>PREGUNTAS</div>
+            </div>
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                            Pregunta 1
+                        </button>
+                    </h2>
+                    <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">Repuesta 1.</div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                            Pregunta 2
+                        </button>
+                    </h2>
+                    <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">Respuesta 2.</div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                            Pregunta 3
+                        </button>
+                    </h2>
+                    <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">Repuesta 3.</div>
+                    </div>
+                </div>
+                </div>
+        </div>
+    </section>
+    <section id="regalo">
+        <div class="inicio">
+            <div class="text-subheader" style="display: flex; align-items: center; border-top: 1px solid var(--color-yellow); margin: 1rem 0; padding-top: 2rem;"><span class="lineh"></span>APORTACIÓN</div>
+            <div class="text-header" style="margin-bottom: 1rem;">
+                <div>REGALO</div>
+            </div>
+            <div class="text-subheader" style="margin-bottom: 1rem;">Vuestra presencia es lo más importante para nosotros. Si deseáis hacernos un regalo, podéis hacerlo de la forma que os resulte más cómoda.</div>
+            <div class="rectangle text-subheader" onclick="showDatosBancarios()" id="mostrarDatosBancarios">MOSTRAR DATOS BANCARIOS</div>
+            <div class="rectangle text-subheader" style="width: auto; display: none;" id="datosBancarios">
+                <div>BANCO: XXX</div>
+                <div>NOMBRE: Tamara</div>
+                <div>IBAN xxx</div>
+                <div style="color: var(--color-green); text-decoration: underline; justify-self: end;" onclick="hiddeDatosBancarios()">OCULTAR</div>
+        </div>
+    </section>
+        <!-- <div style="background-color: hsl(var(--background));">
+            <svg viewBox="0 0 1440 120" preserveAspectRatio="none" class="absolute" style="opacity: 1;">
+                <g>
+                    <path d="M0,70 C240,30 480,110 720,70 C960,30 1200,110 1440,70 C1680,30 1920,110 2160,70 C2400,30 2640,110 2880,70 L2880,0 L0,0 Z" fill="var(--color-soft-taupe)" opacity="0.35">
+                        <animateTransform attributeName="transform" type="translate" from="0 0" to="-1440 0" dur="18s" repeatCount="indefinite"></animateTransform>
+                    </path>
+                </g>
+                <g>
+                    <path d="M0,80 C240,50 480,120 720,80 C960,50 1200,120 1440,80 C1680,50 1920,120 2160,80 C2400,50 2640,120 2880,80 L2880,0 L0,0 Z" fill="var(--color-soft-taupe)" opacity="0.6">
+                        <animateTransform attributeName="transform" type="translate" from="-1440 0" to="0 0" dur="13s" repeatCount="indefinite"></animateTransform>
+                    </path>
+                </g>
+                <g>
+                    <path d="M0,55 C200,15 420,95 720,55 C1020,15 1240,95 1440,55 C1640,15 1860,95 2160,55 C2460,15 2680,95 2880,55 L2880,0 L0,0 Z" fill="var(--color-soft-taupe)">
+                        <animateTransform attributeName="transform" type="translate" from="0 0" to="-1440 0" dur="9s" repeatCount="indefinite"></animateTransform>
+                    </path>
+                </g>
+            </svg>
+        </div>
+        <div class="inicio">
+            <div class="bodoni">NOS CASAMOS</div>
+            <div style="font-family: AngellaWhite; font-size: 2rem;">Tamara & Pablo Tomás</div> -->
+            <!-- <div style="position: absolute; top: 0; left: -50%;">
+                <svg width="400" height="250" viewBox="0 0 400 250">
+                    <path id="arco" d="M 50 200 A 150 150 0 0 1 350 200" fill="transparent"/>
+                    <text text-anchor="middle" style="font-family: BohemeFloral; font-size: 2rem;">
+                        <textPath href="#arco" startOffset="50%">Tamara & Pablo Tomás</textPath>
+                    </text>
+                </svg>
+            </div> -->
+            <!-- <div style="width: 200px; margin-top: -1rem;">
+                <img
+                    alt="acuarela"
+                    src="img/acuarela-sinfondo.png"
+                    style="width: 100%;"/>
+            </div>
+        </div> -->
+        <!-- <div class="slider">
+            <div class="track">
+                <img src="img/1.jpeg">
+                <img src="img/2.jpeg">
+                <img src="img/3.jpeg">
+                <img src="img/4.jpeg">
+                <img src="img/6.jpeg">
+                <img src="img/7.jpeg">
+            </div>
+        </div> -->
+    <!-- </section>
+    <section id="formulario">
+        <div class="formulario">
+            <div class="rsvp">
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">@</span>
+                    <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                </div>
+            </div>
+        </div>
+    </section> -->
+    <!-- <section id="fin">
+        <div style="transform: rotate(180deg);">
+            <svg viewBox="0 0 1440 120" preserveAspectRatio="none" class="absolute" style="opacity: 1;">
+                <g>
+                    <path d="M0,70 C240,30 480,110 720,70 C960,30 1200,110 1440,70 C1680,30 1920,110 2160,70 C2400,30 2640,110 2880,70 L2880,0 L0,0 Z" fill="var(--color-soft-taupe)" opacity="0.35">
+                        <animateTransform attributeName="transform" type="translate" from="0 0" to="-1440 0" dur="18s" repeatCount="indefinite"></animateTransform>
+                    </path>
+                </g>
+                <g>
+                    <path d="M0,80 C240,50 480,120 720,80 C960,50 1200,120 1440,80 C1680,50 1920,120 2160,80 C2400,50 2640,120 2880,80 L2880,0 L0,0 Z" fill="var(--color-soft-taupe)" opacity="0.6">
+                        <animateTransform attributeName="transform" type="translate" from="-1440 0" to="0 0" dur="13s" repeatCount="indefinite"></animateTransform>
+                    </path>
+                </g>
+                <g>
+                    <path d="M0,55 C200,15 420,95 720,55 C1020,15 1240,95 1440,55 C1640,15 1860,95 2160,55 C2460,15 2680,95 2880,55 L2880,0 L0,0 Z" fill="var(--color-soft-taupe)">
+                        <animateTransform attributeName="transform" type="translate" from="0 0" to="-1440 0" dur="9s" repeatCount="indefinite"></animateTransform>
+                    </path>
+                </g>
+            </svg>
+        </div>
+    </section> -->
+    <script data-cfasync="false" src="js/form-submission-handler.js"></script>
+    <script>
+        // const video = document.getElementById("video");
+        // const sectionInicio = document.getElementById("inicio");
+        // video.addEventListener("click", () => {
+        //     video.play();
+        //     setTimeout(() => {
+        //         video.style.opacity = "0";
+        //         setTimeout(() => {
+        //             video.style.display = "none";
+        //             sectionInicio.style.display = "inherit";
+        //         }, 500);
+        //     }, 1500);
+        // });
+
+        // CUENTA REGRESIVA
+        const dias = document.getElementById("dias");
+        const horas = document.getElementById("horas");
+        const minutos = document.getElementById("minutos");
+        const segundos = document.getElementById("segundos");
+        const progressbar = document.getElementById("progressbar")
+
+        function ahoraEnMadrid() {
+            const ahora = new Date();
+            const formatter = new Intl.DateTimeFormat("en-US", {
+                timeZone: "Europe/Madrid",
+                year: "numeric",
+                month: "2-digit",
+                day: "2-digit",
+                hour: "2-digit",
+                minute: "2-digit",
+                second: "2-digit",
+                hour12: false
+            });
+            const partes = formatter.formatToParts(ahora);
+            const valores = {};
+            partes.forEach(p => valores[p.type] = p.value);
+            return new Date(`${valores.year}-${valores.month}-${valores.day}T` + `${valores.hour}:${valores.minute}:${valores.second}`);
+        }
+
+        const date = new Date("2026-10-10T13:00:00");
+        function actualizarContador() {
+            const diferencia = date.getTime() - ahoraEnMadrid().getTime();
+            if (diferencia <= 0) {
+                clearInterval(intervalo);
+                dias.textContent = 0;
+                horas.textContent = "0";
+                minutos.textContent = "0";
+                segundos.textContent = "0";
+                return;
+            }
+            const segundosTotales = Math.floor(diferencia / 1000);
+            dias.textContent = Math.floor(segundosTotales / (60 * 60 * 24));
+            horas.textContent = String(Math.floor((segundosTotales % (60 * 60 * 24) / (60 * 60)))).padStart(2, "0");
+            minutos.textContent = String(Math.floor((segundosTotales % (60 * 60)) / 60)).padStart(2, "0");
+            segundos.textContent = String(segundosTotales % 60).padStart(2, "0");
+            progressbar.style.width = String((1-((282-Math.floor(segundosTotales / (60 * 60 * 24)))/282)) * 100) + '%';
+        }
+        actualizarContador();
+        const intervalo = setInterval(actualizarContador, 1000);
+
+        // REGALO
+        const mostrarDatosBancarios = document.getElementById("mostrarDatosBancarios");
+        const datosBancarios = document.getElementById("datosBancarios");
+        function showDatosBancarios() {
+            mostrarDatosBancarios.style.display = "none";
+            datosBancarios.style.display = "block";
+            
+            confetti({
+                particleCount: 50,
+                angle: 30,
+                spread: 50,
+                origin: {x: 0},
+                colors: ['#F6C531', '#F8DE8C', '#A9B494', '#587042']
+            });
+            confetti({
+                particleCount: 50,
+                angle: 150,
+                spread: 50,
+                origin: {x: 1},
+                colors: ['#F6C531', '#F8DE8C', '#A9B494', '#587042']
+            });
+        }
+        function hiddeDatosBancarios() {
+            datosBancarios.style.display = "none";
+            mostrarDatosBancarios.style.display = "block";
+        }
+
+        // MOVIMIENTO
+        const movimientos = document.querySelectorAll(".movimiento");
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("visible");
+                }
+            });
+        });
+        movimientos.forEach((el) => observer.observe(el));
+    </script>
+</body>
+</html>
