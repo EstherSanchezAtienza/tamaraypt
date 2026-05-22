@@ -10,10 +10,10 @@
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
 </head>
 <body class="body">
-    <!-- <video muted id="video">
+    <video muted id="video">
         <source src="video/inicio.mp4" type="video/mp4">
-    </video> -->
-    <section id="inicio"><!--style="display: none;"-->
+    </video>
+    <section id="inicio" style="display: none;">
         <div class="inicio">
             <div class="text-subheader" style="display: flex; justify-content: space-between; margin-bottom: 3rem;">
                 <div>MADRID - 2026</div>
@@ -59,7 +59,7 @@
             </div>
         </div>
     </section> -->
-    <section id="cuenta">
+    <section id="cuenta" style="display: none;">
         <div class="inicio">
             <div class="text-subheader" style="display: flex; align-items: center; border-top: 1px solid var(--color-yellow); margin: 1rem 0; padding-top: 2rem;"><span class="lineh"></span>CUENTA REGRESIVA</div>
             <div style="display: grid; grid-template-columns: 25% 25% 25% 25%; margin-bottom: 1rem;">
@@ -77,7 +77,7 @@
             </div>
         </div>
     </section>
-    <section id="detalles">
+    <section id="detalles" style="display: none;">
         <div class="inicio">
             <div class="text-subheader" style="display: flex; align-items: center; border-top: 1px solid var(--color-yellow); margin: 1rem 0; padding-top: 2rem;"><span class="lineh"></span>DETALLES</div>
             <div class="text-header" style="margin-bottom: 1rem;">
@@ -118,7 +118,7 @@
             </div>
         </div>
     </section>
-    <section id="planificacion">
+    <section id="planificacion" style="display: none;">
         <div class="inicio">
             <div class="text-subheader" style="display: flex; align-items: center; border-top: 1px solid var(--color-yellow); margin: 1rem 0; padding-top: 2rem;"><span class="lineh"></span>PLANIFICACIÓN</div>
             <div class="text-header" style="margin-bottom: 1rem;">
@@ -235,7 +235,7 @@
             </div>            
         </div>
     </section>
-    <section id="preguntas">
+    <section id="preguntas" style="display: none;">
         <div class="inicio">
             <div class="text-subheader" style="display: flex; align-items: center; border-top: 1px solid var(--color-yellow); margin: 1rem 0; padding-top: 2rem;"><span class="lineh"></span>DUDAS</div>
             <div class="text-header" style="margin-bottom: 1rem;">
@@ -275,7 +275,7 @@
                 </div>
         </div>
     </section>
-    <section id="regalo">
+    <section id="regalo" style="display: none;">
         <div class="inicio">
             <div class="text-subheader" style="display: flex; align-items: center; border-top: 1px solid var(--color-yellow); margin: 1rem 0; padding-top: 2rem;"><span class="lineh"></span>APORTACIÓN</div>
             <div class="text-header" style="margin-bottom: 1rem;">
@@ -371,18 +371,28 @@
     </section> -->
     <script data-cfasync="false" src="js/form-submission-handler.js"></script>
     <script>
-        // const video = document.getElementById("video");
-        // const sectionInicio = document.getElementById("inicio");
-        // video.addEventListener("click", () => {
-        //     video.play();
-        //     setTimeout(() => {
-        //         video.style.opacity = "0";
-        //         setTimeout(() => {
-        //             video.style.display = "none";
-        //             sectionInicio.style.display = "inherit";
-        //         }, 500);
-        //     }, 1500);
-        // });
+        const video = document.getElementById("video");
+        const inicio = document.getElementById("inicio");
+        const cuenta = document.getElementById("cuenta");
+        const detalles = document.getElementById("detalles");
+        const planificacion = document.getElementById("planificacion");
+        const preguntas = document.getElementById("preguntas");
+        const regalo = document.getElementById("regalo");
+        video.addEventListener("click", () => {
+            video.play();
+            setTimeout(() => {
+                video.style.opacity = "0";
+                setTimeout(() => {
+                    video.style.display = "none";
+                    inicio.style.display = "inherit";
+                    cuenta.style.display = "inherit";
+                    detalles.style.display = "inherit";
+                    planificacion.style.display = "inherit";
+                    preguntas.style.display = "inherit";
+                    regalo.style.display = "inherit";
+                }, 500);
+            }, 1500);
+        });
 
         // CUENTA REGRESIVA
         const dias = document.getElementById("dias");
@@ -436,7 +446,7 @@
         function showDatosBancarios() {
             mostrarDatosBancarios.style.display = "none";
             datosBancarios.style.display = "block";
-            
+
             confetti({
                 particleCount: 50,
                 angle: 30,
