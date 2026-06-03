@@ -63,12 +63,12 @@
           if (formElements) {
             formElements.style.display = "none"; // hide form
           }
-          var thankYouMessageSi = form.querySelector(".thankyou_message_yes");
-          var thankYouMessageNo = form.querySelector(".thankyou_message_no");
-          if (formData.data.CONFIRMACION === "SI") {
-            thankYouMessageSi.style.display = "block";
+          var gracias = form.querySelector(".gracias");
+          var losiento = form.querySelector(".losiento");
+          if (formData.data["¿ASISTENCIA?"] === "SI") {
+            gracias.style.display = "block";
           } else {
-            thankYouMessageNo.style.display = "block";
+            losiento.style.display = "block";
           }
         }
     };

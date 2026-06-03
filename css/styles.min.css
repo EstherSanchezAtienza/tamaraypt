@@ -6,6 +6,7 @@
   --color-white: #FAF7E6;
   --color-green: #A9B494;
   --color-green-dark: #587042;
+  --color-yellow-opacity: #F8DE8C70;
 }
 
 @font-face {
@@ -72,19 +73,26 @@
 }
 
 #video {
-    width: 100%;
-    height: 100vh;
-    object-fit: cover;
-    z-index: 9999;
-    pointer-events: auto;
-    cursor: pointer;
-    transition: opacity 0.5s ease;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  z-index: 9999;
+  pointer-events: auto;
+  cursor: pointer;
+  transition: opacity 0.5s ease;
 }
 
 .inicio {
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
+  padding: 1rem;
+}
+.fin {
+  margin-top: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  background: var(--color-green-dark);
   padding: 1rem;
 }
 
@@ -127,33 +135,17 @@
   margin-right: .5rem;
 }
 
-
-
-
-
-
-.formulario {
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.rsvp {
-    background: white;
-    border-radius: 10px;
-    border: 1px solid var(--color-soft-taupe);
-    padding: 1rem;
-}
-
-.fin {
-
+.hidden {
+  display: none;
 }
 
 
+/* PROGRESS BAR */
 .progress-bar {
   background: var(--color-green) !important;
 }
 
+/* ACCORDION */
 .accordion {
   --bs-accordion-border-color: none !important;
 }
@@ -184,8 +176,58 @@
   padding: .5rem .5rem 1rem .5rem !important;
 }
 
+/* INPUT */
+.form-control {
+  box-shadow: none !important;
+  border: none !important;
+  border-radius: 0 !important;
+  background: transparent !important;
 
+  font-family: "BrightAngels" !important;
+  font-size: 3rem !important;
+  color: var(--color-green-dark) !important;
+  padding: 0rem .5rem !important;
+  height: 2.5rem !important;
+  line-height: 3rem !important;
+  overflow: visible !important;
+}
 
+/* RADIO BUTTON */
+input[type="radio"]:checked {
+  background-color: white;
+  border-color: var(--color-green-dark);
+}
+.form-check-input:checked[type=radio] {
+  box-shadow: none !important;
+  --bs-form-check-bg-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2.5' fill='%23587042'/%3e%3c/svg%3e") !important;
+}
+.form-check-label {
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: .75rem;
+  letter-spacing: .1rem;
+  color: var(--color-green-dark);
+}
+
+/** BUTTON **/
+.btn {
+  background-color: var(--color-green) !important;
+  border: none !important;
+  
+  font-family: "Roboto Mono", monospace !important;
+  font-optical-sizing: auto !important;
+  font-weight: 200 !important;
+  font-style: normal !important;
+  font-size: .75rem !important;
+  letter-spacing: .1rem !important;
+}
+.btn-primary {
+  width: 2.5rem;
+}
+
+/** MOVIMIENTO **/
 .movimiento {
   opacity: 0;
   transform: translateX(-100px);
@@ -196,30 +238,18 @@
   transform: translateX(0);
 }
 
-/* .slider {
-    width: 100vw;
-    height: 250px;
-    overflow: hidden;
-    position: relative;
-  }
-
-  .track {
-    display: flex;
-    width: calc(300px * 6);
-    animation: scroll 15s linear infinite;
-  }
-
-  .track img {
-    width: 300px;
-    height: 250px;
-    object-fit: cover;
-  }
-
-  @keyframes scroll {
-    0% {
-      transform: translateX(-300px);
-    }
-    100% {
-      transform: translateX(100%);
-    }
-  } */
+/** CARROUSEL **/
+.slider {
+  width: 100%;
+  overflow: hidden;
+}
+.track {
+  display: flex;
+  width: max-content;
+}
+.track img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  margin-right: 20px;
+}

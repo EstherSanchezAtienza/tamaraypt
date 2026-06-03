@@ -10,10 +10,10 @@
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
 </head>
 <body class="body">
-    <video muted playsinline webkit-playsinline poster="img/frame.png" id="video">
+    <!-- <video muted playsinline webkit-playsinline poster="img/frame.png" id="video">
         <source src="video/inicio.mp4" type="video/mp4">
-    </video>
-    <section id="inicio" style="display: none;">
+    </video> -->
+    <section id="inicio">
         <div class="inicio">
             <div class="text-subheader" style="display: flex; justify-content: space-between; margin-bottom: 3rem;">
                 <div>MADRID - 2026</div>
@@ -32,34 +32,27 @@
             <div class="text-header" style="text-align: center;">10.10.2026</div>
         </div>
     </section>
-    <!-- <section id="inicio"> 
+    <section id="nosotros">
         <div class="inicio">
-            <div style="display: flex; justify-content: space-between; margin-bottom: 3rem;">
-                <div class="roboto-mono-thin">MADRID - 2026</div>
-                <div class="roboto-mono-thin">INVITACIÓN</div>
+            <div class="text-subheader" style="display: flex; align-items: center; border-top: 1px solid var(--color-yellow); margin: 1rem 0; padding-top: 2rem;"><span class="lineh"></span>SOBRE NOSOTROS</div>
+            <div class="text-header" style="margin-bottom: 1rem;">
+                <div style="margin-bottom: -1rem;">NUESTRA</div>
+                <div>HISTORIA</div>
             </div>
-            <div style="display: grid; grid-template-columns: 50% 50%; gap: 1rem;">
-                <div class="outfit-regular">NOS</div>
-                <div class="roboto-mono-thin" style="font-size: .6rem;">QUERIDOS AMIGOS Y FAMILIA, NOS CASAMOS. ACOMPÁÑANOS EL 10 DE OCUBRE EN MADRID.</div>
-            </div>
-            <div class="outfit-regular" style="margin-top: -1rem;">CASAMOS</div>
-            <div class="outfit-regular" style="display: flex; justify-content: end; border-top: 1px solid var(--color-soft-taupe); border-bottom: 1px solid var(--color-soft-taupe); margin: 1rem 0; padding: 1rem 0;">10.10.2026</div>
-            <div class="outfit-regular" style="font-size: 2.9rem;">
-                <div>TAMARA</div>
-                <div style="position: relative; display: flex;">
-                    <div>&</div>
-                    <div style="position: absolute; top: -4rem; right: -1rem;">
-                        <img
-                            alt="contorno"
-                            src="img/acuarela-sinfondo.png"
-                            style="width: 200px;"/>
-                    </div>
+            <div class="slider">
+                <div class="track" id="track">
+                    <img src="img/1.jpeg">
+                    <img src="img/2.jpeg">
+                    <img src="img/3.jpeg">
+                    <img src="img/8.jpeg">
+                    <img src="img/4.jpeg">
+                    <img src="img/6.jpeg">
+                    <img src="img/7.jpeg">
                 </div>
-                <div>PABLO TOMÁS</div>
             </div>
         </div>
-    </section> -->
-    <section id="cuenta" style="display: none;">
+    </section>
+    <section id="cuenta">
         <div class="inicio">
             <div class="text-subheader" style="display: flex; align-items: center; border-top: 1px solid var(--color-yellow); margin: 1rem 0; padding-top: 2rem;"><span class="lineh"></span>CUENTA REGRESIVA</div>
             <div style="display: grid; grid-template-columns: 25% 25% 25% 25%; margin-bottom: 1rem;">
@@ -77,7 +70,7 @@
             </div>
         </div>
     </section>
-    <section id="detalles" style="display: none;">
+    <section id="detalles">
         <div class="inicio">
             <div class="text-subheader" style="display: flex; align-items: center; border-top: 1px solid var(--color-yellow); margin: 1rem 0; padding-top: 2rem;"><span class="lineh"></span>DETALLES</div>
             <div class="text-header" style="margin-bottom: 1rem;">
@@ -106,19 +99,19 @@
                         alt="location"
                         src="img/location.svg"
                         style="width: 1rem;"/>
-                    <span style="text-decoration: underline; margin-left: .25rem;">MAPS</span>
+                    <a class="text-subheader" href="https://maps.app.goo.gl/ho4jgbEzqCY5z4s48" target="_blank" style="text-decoration: underline; margin-left: .25rem;">MAPS</a>
                 </div>
                 <div style="display: flex; align-items: center;">
                     <img
                         alt="calendar"
                         src="img/calendar.svg"
                         style="width: 1rem;"/>
-                    <span style="text-decoration: underline; margin-left: .25rem;">CALENDARIO</span>
+                    <a class="text-subheader" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Boda+Tamara+y+PT&dates=20261010/20261010&location=Finca Los Olivos | Finca de Bodas y Eventos, Paraje Campillo Alto, 13, 28722 El Vellón, Madrid, España" target="_blank" style="text-decoration: underline; margin-left: .25rem;">CALENDARIO</a>
                 </div>
             </div>
         </div>
     </section>
-    <section id="planificacion" style="display: none;">
+    <section id="planificacion">
         <div class="inicio">
             <div class="text-subheader" style="display: flex; align-items: center; border-top: 1px solid var(--color-yellow); margin: 1rem 0; padding-top: 2rem;"><span class="lineh"></span>PLANIFICACIÓN</div>
             <div class="text-header" style="margin-bottom: 1rem;">
@@ -235,7 +228,7 @@
             </div>            
         </div>
     </section>
-    <section id="preguntas" style="display: none;">
+    <section id="preguntas">
         <div class="inicio">
             <div class="text-subheader" style="display: flex; align-items: center; border-top: 1px solid var(--color-yellow); margin: 1rem 0; padding-top: 2rem;"><span class="lineh"></span>DUDAS</div>
             <div class="text-header" style="margin-bottom: 1rem;">
@@ -245,43 +238,113 @@
                 <div class="accordion-item">
                     <h2 class="accordion-header">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                            Pregunta 1
+                            ¿A qué hora debería llegar?
                         </button>
                     </h2>
                     <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                        <div class="accordion-body">Repuesta 1.</div>
+                        <div class="accordion-body">La ceremonia empieza a la 13, así que te recomendamos llegar 30 minutos antes para saludar, encontrar tu sitio y ver alguna que otra sorpresita que hemos preparado.</div>
                     </div>
                 </div>
                 <div class="accordion-item">
                     <h2 class="accordion-header">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                            Pregunta 2
+                            ¿El evento es en el exterior?
                         </button>
                     </h2>
                     <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                        <div class="accordion-body">Respuesta 2.</div>
+                        <div class="accordion-body">Sí, gran parte de la celebración será al aire libre. Octubre suele regalarnos temperaturas muy agradables durante el día y algo más fresquitas por la noche, así que quizá una chaquetita te venga bien para cuando empiecen los bailes más intensos. Y no te preocupes, tenemos plan B por si el tiempo decide ponerse creativo.</div>
                     </div>
                 </div>
                 <div class="accordion-item">
                     <h2 class="accordion-header">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                            Pregunta 3
+                            ¿Cómo se llega a la finca?
                         </button>
                     </h2>
                     <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                        <div class="accordion-body">Repuesta 3.</div>
+                        <div class="accordion-body">Llegar será muy fácil. Puedes venir en tu propio coche, ya que la finca dispone de aparcamiento, o aprovechar el autobús que hemos organizado para que la única preocupación del día sea pasarlo bien. Más adelante compartiremos todos los horarios y puntos de salida para que nadie termine celebrando en la finca equivocada.</div>
                     </div>
                 </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                            ¿Podemos pedir canciones?
+                        </button>
+                    </h2>
+                    <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">¡Por supuesto! Queremos una pista de baile llena, así que aceptamos sugerencias (en el formulario de confirmación está la opción). Eso sí, nos reservamos el derecho a vetar cualquier canción que dure más que un discurso de boda.</div>
+                    </div>
                 </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                            ¿Podremos compartir las fotos?
+                        </button>
+                    </h2>
+                    <div id="flush-collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">Os facilitaremos un enlace para que podáis subir todas las fotos y vídeos que hagáis. Sí, incluso esas que esperamos no recordar al día siguiente.</div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
+                            ¿Habrá preboda?
+                        </button>
+                    </h2>
+                    <div id="flush-collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">No hemos organizado ninguna preboda oficial. Hemos decidido reservar toda nuestra energía para darlo absolutamente todo el gran día.</div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSeven" aria-expanded="false" aria-controls="flush-collapseSeven">
+                            ¿Hasta qué hora dura la fiesta?
+                        </button>
+                    </h2>
+                    <div id="flush-collapseSeven" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">Hasta que el cuerpo aguante... o hasta que nos apaguen las luces a las xxH. Lo que ocurra primero.</div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseEight" aria-expanded="false" aria-controls="flush-collapseEight">
+                            ¿Hay dress code?
+                        </button>
+                    </h2>
+                    <div id="flush-collapseEight" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">Lo más importante es que vengas cómo y con ganas de celebrar. Elegante, pero siendo tú mismo. Y recuerda: el blanco ya tiene dueño.</div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseNine" aria-expanded="false" aria-controls="flush-collapseNine">
+                            ¿Dónde puedo dejar mis cosas?
+                        </button>
+                    </h2>
+                    <div id="flush-collapseNine" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">Habrá un espacio habilitado donde podréis dejar abrigos, bolsos y demás pertenencias para que podáis disfrutar de la fiesta con las manos libres.</div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTen" aria-expanded="false" aria-controls="flush-collapseTen">
+                            ¿Y si tengo más dudas?
+                        </button>
+                    </h2>
+                    <div id="flush-collapseTen" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">Escríbemos cuando quieras. Estaremos encantados de ayudarte durante los preparativos y resolver cualquier pregunta que te surja.</div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
-    <section id="regalo" style="display: none;">
+    <section id="regalo">
         <div class="inicio">
             <div class="text-subheader" style="display: flex; align-items: center; border-top: 1px solid var(--color-yellow); margin: 1rem 0; padding-top: 2rem;"><span class="lineh"></span>APORTACIÓN</div>
             <div class="text-header" style="margin-bottom: 1rem;">
                 <div>REGALO</div>
             </div>
-            <div class="text-subheader" style="margin-bottom: 1rem;">Vuestra presencia es lo más importante para nosotros. Si deseáis hacernos un regalo, podéis hacerlo de la forma que os resulte más cómoda.</div>
+            <div class="text-subheader" style="margin-bottom: 2rem;">Vuestra presencia es lo más importante para nosotros. Si deseáis hacernos un regalo, podéis hacerlo de la forma que os resulte más cómoda.</div>
             <div class="rectangle text-subheader" onclick="showDatosBancarios()" id="mostrarDatosBancarios">MOSTRAR DATOS BANCARIOS</div>
             <div class="rectangle text-subheader" style="width: auto; display: none;" id="datosBancarios">
                 <div>BANCO: XXX</div>
@@ -290,109 +353,142 @@
                 <div style="color: var(--color-green); text-decoration: underline; justify-self: end;" onclick="hiddeDatosBancarios()">OCULTAR</div>
         </div>
     </section>
-        <!-- <div style="background-color: hsl(var(--background));">
-            <svg viewBox="0 0 1440 120" preserveAspectRatio="none" class="absolute" style="opacity: 1;">
-                <g>
-                    <path d="M0,70 C240,30 480,110 720,70 C960,30 1200,110 1440,70 C1680,30 1920,110 2160,70 C2400,30 2640,110 2880,70 L2880,0 L0,0 Z" fill="var(--color-soft-taupe)" opacity="0.35">
-                        <animateTransform attributeName="transform" type="translate" from="0 0" to="-1440 0" dur="18s" repeatCount="indefinite"></animateTransform>
-                    </path>
-                </g>
-                <g>
-                    <path d="M0,80 C240,50 480,120 720,80 C960,50 1200,120 1440,80 C1680,50 1920,120 2160,80 C2400,50 2640,120 2880,80 L2880,0 L0,0 Z" fill="var(--color-soft-taupe)" opacity="0.6">
-                        <animateTransform attributeName="transform" type="translate" from="-1440 0" to="0 0" dur="13s" repeatCount="indefinite"></animateTransform>
-                    </path>
-                </g>
-                <g>
-                    <path d="M0,55 C200,15 420,95 720,55 C1020,15 1240,95 1440,55 C1640,15 1860,95 2160,55 C2460,15 2680,95 2880,55 L2880,0 L0,0 Z" fill="var(--color-soft-taupe)">
-                        <animateTransform attributeName="transform" type="translate" from="0 0" to="-1440 0" dur="9s" repeatCount="indefinite"></animateTransform>
-                    </path>
-                </g>
-            </svg>
-        </div>
+    <section id="rsvp">
         <div class="inicio">
-            <div class="bodoni">NOS CASAMOS</div>
-            <div style="font-family: AngellaWhite; font-size: 2rem;">Tamara & Pablo Tomás</div> -->
-            <!-- <div style="position: absolute; top: 0; left: -50%;">
-                <svg width="400" height="250" viewBox="0 0 400 250">
-                    <path id="arco" d="M 50 200 A 150 150 0 0 1 350 200" fill="transparent"/>
-                    <text text-anchor="middle" style="font-family: BohemeFloral; font-size: 2rem;">
-                        <textPath href="#arco" startOffset="50%">Tamara & Pablo Tomás</textPath>
-                    </text>
-                </svg>
-            </div> -->
-            <!-- <div style="width: 200px; margin-top: -1rem;">
-                <img
-                    alt="acuarela"
-                    src="img/acuarela-sinfondo.png"
-                    style="width: 100%;"/>
+            <div class="text-subheader" style="display: flex; align-items: center; border-top: 1px solid var(--color-yellow); margin: 1rem 0; padding-top: 2rem;"><span class="lineh"></span>CONFIRMACIÓN</div>
+            <div class="text-header" style="margin-bottom: 1rem;">
+                <div>RSVP</div>
             </div>
-        </div> -->
-        <!-- <div class="slider">
-            <div class="track">
-                <img src="img/1.jpeg">
-                <img src="img/2.jpeg">
-                <img src="img/3.jpeg">
-                <img src="img/4.jpeg">
-                <img src="img/6.jpeg">
-                <img src="img/7.jpeg">
-            </div>
-        </div> -->
-    <!-- </section>
-    <section id="formulario">
-        <div class="formulario">
-            <div class="rsvp">
-                <div class="input-group mb-3">
-                    <span class="input-group-text" id="basic-addon1">@</span>
-                    <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+            <form   
+                class="form"
+                method="POST"
+                data-email="esther.sanchezatienza@gmail.com"
+                action="https://script.google.com/macros/s/AKfycbwr-Yq3IweadQp_MM_FlC1pRT2ZzLVw4D7z-9bJ5dukfZf3j6LPELk6D5jyFveruyzt8g/exec">
+                <div class="form">
+                    <div class="text-subheader" style="margin-bottom: 2rem;">Por favor, confirma tu asistencia antes del xx de xx de 2026.</div>
+                    <div style="position: relative; margin-bottom: 1rem;">
+                        <label for="nombre" class="text-subheader">NOMBRE*</label>
+                        <input type="text" class="form-control" id="nombre" placeholder="" name="NOMBRE" required>
+                        <div class="lineh" style="position: absolute; bottom: 3px; width: 100%; background-color: var(--color-yellow); z-index: -1;"></div>
+                    </div>
+                    <div style="position: relative; margin-bottom: 1rem;">
+                        <label for="apellidos" class="text-subheader">APELLIDOS*</label>
+                        <input type="text" class="form-control" id="apellidos" placeholder="" name="APELLIDOS" required>
+                        <div class="lineh" style="position: absolute; bottom: 3px; width: 100%; background-color: var(--color-yellow); z-index: -1;"></div>
+                    </div>
+                    <div class="text-subheader" style="margin-bottom: .5rem;">¿ASISTIRÁS?</div>
+                    <div style="display: flex; gap: 1rem; align-items: center; margin-bottom: 1rem;">
+                        <div class="form-check" style="cursor: pointer;">
+                            <input class="form-check-input si" type="radio" name="¿ASISTENCIA?" id="si" style="cursor: pointer;" value="SI" checked>
+                            <label class="form-check-label" for="si" style="cursor: pointer;">Sí, asistiré</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input no" type="radio" name="¿ASISTENCIA?" id="no" style="cursor: pointer;" value="NO">
+                            <label class="form-check-label" for="no" style="cursor: pointer;">No podré asistir</label>
+                        </div>
+                    </div>
+                    <div id="confirmacion">
+                        <div style="position: relative; margin-bottom: 1rem;">
+                            <label for="alergias" class="text-subheader">ALERGIAS / INTOLERANCIAS</label>
+                            <input type="text" class="form-control" id="alergias" placeholder="" name="ALERGIAS">
+                            <div class="lineh" style="position: absolute; bottom: 3px; width: 100%; background-color: var(--color-yellow); z-index: -1;"></div>
+                        </div>
+                        <div class="text-subheader" style="margin-bottom: .5rem;">NÚMERO DE INVITADOS (INCLUYÉNDOTE)</div>
+                        <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+                            <button type="button" class="btn btn-primary" id="less" disabled onclick="addInvitados(false)">-</button>
+                            <div class="text-subheader" style="font-weight: 400; margin: 0 1rem;" id="numeroInvitados">1</div>
+                            <button type="button" class="btn btn-primary" id="plus" onclick="addInvitados(true)">+</button>
+                        </div>
+                        <div class="hidden" style="padding: 1rem 1rem 1rem 1rem; margin-bottom: 1rem; background: var(--color-yellow-opacity); border-radius: .5rem;" id="invitados"></div>
+                        <div class="text-subheader" style="margin-bottom: .5rem;">¿NECESITAS TRANSPORTE EN AUTOBÚS?</div>
+                        <div style="display: flex; gap: 1rem; align-items: center; margin-bottom: 1rem;">
+                            <div class="form-check" style="cursor: pointer;">
+                                <input class="form-check-input si" type="radio" name="¿AUTOBÚS?" id="autobusSi" style="cursor: pointer;" value="SI">
+                                <label class="form-check-label" for="autobusSi" style="cursor: pointer;">Sí, necesito autobús</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input no" type="radio" name="¿AUTOBÚS?" id="autobusNo" style="cursor: pointer;" value="NO" checked>
+                                <label class="form-check-label" for="autobusNo" style="cursor: pointer;">No, iré por mi cuenta</label>
+                            </div>
+                        </div>
+                        <div style="position: relative; margin-bottom: 1rem;">
+                            <label for="cancion" class="text-subheader">CANCIÓN QUE NO PUEDE FALTAR</label>
+                            <input type="text" class="form-control" id="cancion" placeholder="" name="CANCION">
+                            <div class="lineh" style="position: absolute; bottom: 3px; width: 100%; background-color: var(--color-yellow); z-index: -1;"></div>
+                        </div>
+                    </div>
+                    <div style="position: relative; margin-bottom: 1rem;">
+                        <label for="mensaje" class="text-subheader">MENSAJE PARA LA PAREJA</label>
+                        <textarea type="text" class="form-control" id="mensaje" placeholder="" name="MENSAJE"></textarea>
+                        <div class="lineh" style="position: absolute; bottom: 3px; width: 100%; background-color: var(--color-yellow); z-index: -1;"></div>
+                    </div>
+                    <div style="display: flex; justify-content: center;">
+                        <button type="submit" class="btn btn-secondary" id="send">
+                            <img
+                                alt="Enviar"
+                                src="img/send.svg"
+                                style="transform: rotate(-30deg); margin-top: -.5rem;"/>
+                            ENVIAR CONFIRMACIÓN
+                        </button>
+                    </div>
                 </div>
+                <div class="gracias text-subheader" style="display: none;">
+                    <div style="margin-bottom: 1rem; font-weight: 400;">¡PERFECTO!</div>
+                    <div style="margin-bottom: 1rem;">Hemos recibido vuestra respuesta correctamente.</div>
+                    <div style="margin-bottom: 1rem;">Estamos deseando celebrar este día tan especial con vosotros y compartir juntos momentos inolvidables. Gracias por dedicar unos minutos a completar el formulario.</div>
+                    <div style="margin-bottom: 1rem;">Si más adelante necesitáis modificar algún dato, no dudéis en poneros en contacto con nosotros.</div>
+                    <div style="font-weight: 400;">¡Nos vemos el 10 de octubre!</div>
+                </div>
+                <div class="losiento text-subheader" style="display: none;">
+                    <div style="margin-bottom: 1rem; font-weight: 400;">¡QUÉ PENA!</div>
+                    <div style="margin-bottom: 1rem;">Hemos recibido vuesta respuesta y sentimos mucho que no podáis acompañarnos en un día tan importante para nosotros.</div>
+                    <div style="margin-bottom: 1rem;">Aunque os echaremos de mens, agradecemos de corazón que nos hayáis avisado y esperamos tener la oportunidad de celebrar juntos en otra ocasión.</div>
+                    <div style="font-weight: 400;">Os mandamos un abrazo enorme y brindaremos por vosotros.</div>
+                </div>
+            </form>
+        </div>
+    </section>
+    <section id="fin">
+        <div class="fin">
+            <div class="text-brush" style="text-align: center; font-size: 3rem; color: var(--color-green);">
+                <span>Tamara</span>
+                <img
+                    alt="Corazón"
+                    src="img/heart.svg"
+                    style="margin-top: -1rem;"/>
+                <span>Pablo Tómas</span>
             </div>
+            <div class="text-subheader" style="text-align: center; color: var(--color-green);">10.10.2026</div>
         </div>
-    </section> -->
-    <!-- <section id="fin">
-        <div style="transform: rotate(180deg);">
-            <svg viewBox="0 0 1440 120" preserveAspectRatio="none" class="absolute" style="opacity: 1;">
-                <g>
-                    <path d="M0,70 C240,30 480,110 720,70 C960,30 1200,110 1440,70 C1680,30 1920,110 2160,70 C2400,30 2640,110 2880,70 L2880,0 L0,0 Z" fill="var(--color-soft-taupe)" opacity="0.35">
-                        <animateTransform attributeName="transform" type="translate" from="0 0" to="-1440 0" dur="18s" repeatCount="indefinite"></animateTransform>
-                    </path>
-                </g>
-                <g>
-                    <path d="M0,80 C240,50 480,120 720,80 C960,50 1200,120 1440,80 C1680,50 1920,120 2160,80 C2400,50 2640,120 2880,80 L2880,0 L0,0 Z" fill="var(--color-soft-taupe)" opacity="0.6">
-                        <animateTransform attributeName="transform" type="translate" from="-1440 0" to="0 0" dur="13s" repeatCount="indefinite"></animateTransform>
-                    </path>
-                </g>
-                <g>
-                    <path d="M0,55 C200,15 420,95 720,55 C1020,15 1240,95 1440,55 C1640,15 1860,95 2160,55 C2460,15 2680,95 2880,55 L2880,0 L0,0 Z" fill="var(--color-soft-taupe)">
-                        <animateTransform attributeName="transform" type="translate" from="0 0" to="-1440 0" dur="9s" repeatCount="indefinite"></animateTransform>
-                    </path>
-                </g>
-            </svg>
-        </div>
-    </section> -->
+    </section>
     <script data-cfasync="false" src="js/form-submission-handler.js"></script>
     <script>
-        const video = document.getElementById("video");
-        const inicio = document.getElementById("inicio");
-        const cuenta = document.getElementById("cuenta");
-        const detalles = document.getElementById("detalles");
-        const planificacion = document.getElementById("planificacion");
-        const preguntas = document.getElementById("preguntas");
-        const regalo = document.getElementById("regalo");
-        video.addEventListener("click", () => {
-            video.play();
-            setTimeout(() => {
-                video.style.opacity = "0";
-                setTimeout(() => {
-                    video.style.display = "none";
-                    inicio.style.display = "inherit";
-                    cuenta.style.display = "inherit";
-                    detalles.style.display = "inherit";
-                    planificacion.style.display = "inherit";
-                    preguntas.style.display = "inherit";
-                    regalo.style.display = "inherit";
-                }, 500);
-            }, 1500);
-        });
+        // const video = document.getElementById("video");
+        // const inicio = document.getElementById("inicio");
+        // const cuenta = document.getElementById("cuenta");
+        // const detalles = document.getElementById("detalles");
+        // const planificacion = document.getElementById("planificacion");
+        // const preguntas = document.getElementById("preguntas");
+        // const regalo = document.getElementById("regalo");
+        // const rsvp = document.getElementById("rsvp");
+        // const fin = document.getElementById("rsvp");
+        // video.addEventListener("click", () => {
+        //     video.play();
+        //     setTimeout(() => {
+        //         video.style.opacity = "0";
+        //         setTimeout(() => {
+        //             video.style.display = "none";
+        //             inicio.style.display = "inherit";
+        //             cuenta.style.display = "inherit";
+        //             detalles.style.display = "inherit";
+        //             planificacion.style.display = "inherit";
+        //             preguntas.style.display = "inherit";
+        //             regalo.style.display = "inherit";
+        //             rsvp.style.display = "inherit";
+        //             fin.style.display = "inherit";
+        //         }, 500);
+        //     }, 1500);
+        // });
 
         // CUENTA REGRESIVA
         const dias = document.getElementById("dias");
@@ -467,6 +563,61 @@
             mostrarDatosBancarios.style.display = "block";
         }
 
+        // RSVP
+        const asistenciaSi = document.getElementById("si");
+        const asistenciaNo = document.getElementById("no");
+        const confirmacion = document.getElementById("confirmacion");
+        asistenciaSi.addEventListener("change", () => {
+            confirmacion.classList.remove("hidden");
+            send.disabled = false;
+        });
+        asistenciaNo.addEventListener("change", () => {
+            confirmacion.classList.add("hidden");
+            send.disabled = false;
+        });
+
+        const numeroInvitados = document.getElementById("numeroInvitados");
+        const less = document.getElementById("less");
+        const plus = document.getElementById("plus");
+        const invitados = document.getElementById("invitados");
+        function addInvitados(add) {
+            invitados.innerHTML = "";
+            if (add) {
+                numeroInvitados.textContent = Number(numeroInvitados.textContent) + 1;
+                less.disabled = false;
+                invitados.classList.remove("hidden");
+            } else {
+                numeroInvitados.textContent = Number(numeroInvitados.textContent) - 1;
+                if (Number(numeroInvitados.textContent) === 1) {
+                    less.disabled = true;
+                    invitados.classList.add("hidden");
+                }
+            }
+            for (let i = 2; i <= Number(numeroInvitados.textContent); i++) {
+                const div = document.createElement("div");
+                div.innerHTML = `
+                    <div class="text-subheader" style="margin-bottom: .5rem; font-weight: 400;">INVITADO ${i}</div>
+                    <div style="position: relative; margin-bottom: 1rem;">
+                        <label for="nombre" class="text-subheader">NOMBRE*</label>
+                        <input type="text" class="form-control" id="nombre" placeholder="" name="NOMBRE INVITADO ${i}" required>
+                        <div class="lineh" style="position: absolute; bottom: 3px; width: 100%; background-color: var(--color-yellow); z-index: -1;"></div>
+                    </div>
+                    <div style="position: relative; margin-bottom: 1rem;">
+                        <label for="apellidos" class="text-subheader">APELLIDOS*</label>
+                        <input type="text" class="form-control" id="apellidos" placeholder="" name="APELLIDO INVITADO ${i}" required>
+                        <div class="lineh" style="position: absolute; bottom: 3px; width: 100%; background-color: var(--color-yellow); z-index: -1;"></div>
+                    </div>
+                    <div style="position: relative; margin-bottom: 1rem;">
+                        <label for="alergias" class="text-subheader">ALERGIAS / INTOLERANCIAS</label>
+                        <input type="text" class="form-control" id="alergias" placeholder="" name="ALERGIAS INVITADO ${i}">
+                        <div class="lineh" style="position: absolute; bottom: 3px; width: 100%; background-color: var(--color-yellow); z-index: -1;"></div>
+                    </div>
+                `;
+                invitados.appendChild(div);
+            }
+        }
+
+
         // MOVIMIENTO
         const movimientos = document.querySelectorAll(".movimiento");
         const observer = new IntersectionObserver((entries) => {
@@ -477,6 +628,23 @@
             });
         });
         movimientos.forEach((el) => observer.observe(el));
+
+        // TRACK
+        const track = document.getElementById('track');
+        track.innerHTML += track.innerHTML;
+        track.innerHTML += track.innerHTML;
+
+        let pos = 0;
+        const velocidad = 1;
+        function animar() {
+            pos += velocidad;
+            if (pos >= track.scrollWidth / 4) {
+                pos = 0;
+            }
+            track.style.transform = `translateX(-${pos}px)`;
+            requestAnimationFrame(animar);
+        }
+        animar();
     </script>
 </body>
 </html>
