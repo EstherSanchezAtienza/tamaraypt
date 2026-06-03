@@ -119,7 +119,7 @@
 
 .linev {
   width: 2px;
-  height: 26rem;
+  height: 23rem;
   content: "";
   display: inline-block;
   background-color: var(--color-green);
