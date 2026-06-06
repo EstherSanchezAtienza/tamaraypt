@@ -10,10 +10,10 @@
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
 </head>
 <body class="body">
-    <!-- <video muted playsinline webkit-playsinline poster="img/frame.png" id="video">
+    <video muted playsinline webkit-playsinline poster="img/frame.png" id="video">
         <source src="video/inicio.mp4" type="video/mp4">
-    </video> -->
-    <section id="inicio">
+    </video>
+    <section id="inicio" style="display: none;">
         <div class="inicio">
             <div class="text-subheader" style="display: flex; justify-content: space-between; margin-bottom: 3rem;">
                 <div>MADRID - 2026</div>
@@ -32,7 +32,7 @@
             <div class="text-header" style="text-align: center;">10.10.2026</div>
         </div>
     </section>
-    <section id="nosotros">
+    <section id="nosotros" style="display: none;">
         <div class="inicio">
             <div class="text-subheader" style="display: flex; align-items: center; border-top: 1px solid var(--color-yellow); margin: 1rem 0; padding-top: 2rem;"><span class="lineh"></span>SOBRE NOSOTROS</div>
             <div class="text-header" style="margin-bottom: 1rem;">
@@ -52,7 +52,7 @@
             </div>
         </div>
     </section>
-    <section id="cuenta">
+    <section id="cuenta" style="display: none;">
         <div class="inicio">
             <div class="text-subheader" style="display: flex; align-items: center; border-top: 1px solid var(--color-yellow); margin: 1rem 0; padding-top: 2rem;"><span class="lineh"></span>CUENTA REGRESIVA</div>
             <div style="display: grid; grid-template-columns: 25% 25% 25% 25%; margin-bottom: 1rem;">
@@ -70,7 +70,7 @@
             </div>
         </div>
     </section>
-    <section id="detalles">
+    <section id="detalles" style="display: none;">
         <div class="inicio">
             <div class="text-subheader" style="display: flex; align-items: center; border-top: 1px solid var(--color-yellow); margin: 1rem 0; padding-top: 2rem;"><span class="lineh"></span>DETALLES</div>
             <div class="text-header" style="margin-bottom: 1rem;">
@@ -111,7 +111,7 @@
             </div>
         </div>
     </section>
-    <section id="planificacion">
+    <section id="planificacion" style="display: none;">
         <div class="inicio">
             <div class="text-subheader" style="display: flex; align-items: center; border-top: 1px solid var(--color-yellow); margin: 1rem 0; padding-top: 2rem;"><span class="lineh"></span>PLANIFICACIÓN</div>
             <div class="text-header" style="margin-bottom: 1rem;">
@@ -139,7 +139,7 @@
                     <div class="circle">
                         <img
                             alt="bus"
-                            src="img/ceremony.svg"
+                            src="img/ceremonia.png"
                             style="width: 2rem;">
                     </div>
                     <div style="margin-left: 1rem;">
@@ -154,13 +154,13 @@
                     <div class="circle">
                         <img
                             alt="bus"
-                            src="img/cocktail.svg"
+                            src="img/coctel.png"
                             style="width: 2rem;">
                     </div>
                     <div style="margin-left: 1rem;">
                         <div style="display: flex;">
                             <div class="chip text-subheader" style="font-size: .7rem; color: white;">14:00H</div>
-                            <div class="text-subheader" style="font-weight: 400; font-size: .7rem; margin-left: .5rem;">COCKTAIL</div>
+                            <div class="text-subheader" style="font-weight: 400; font-size: .7rem; margin-left: .5rem;">CÓCTEL</div>
                         </div>
                         <div class="text-subtitle" style="margin-top: .2rem;">Aperitivos y bebidas en los jardines</div>
                     </div>
@@ -169,7 +169,7 @@
                     <div class="circle">
                         <img
                             alt="bus"
-                            src="img/dinner.svg"
+                            src="img/banquete.png"
                             style="width: 2rem;">
                     </div>
                     <div style="margin-left: 1rem;">
@@ -213,7 +213,7 @@
             </div>            
         </div>
     </section>
-    <section id="preguntas">
+    <section id="preguntas" style="display: none;">
         <div class="inicio">
             <div class="text-subheader" style="display: flex; align-items: center; border-top: 1px solid var(--color-yellow); margin: 1rem 0; padding-top: 2rem;"><span class="lineh"></span>DUDAS</div>
             <div class="text-header" style="margin-bottom: 1rem;">
@@ -323,7 +323,7 @@
             </div>
         </div>
     </section>
-    <section id="regalo">
+    <section id="regalo" style="display: none;">
         <div class="inicio">
             <div class="text-subheader" style="display: flex; align-items: center; border-top: 1px solid var(--color-yellow); margin: 1rem 0; padding-top: 2rem;"><span class="lineh"></span>APORTACIÓN</div>
             <div class="text-header" style="margin-bottom: 1rem;">
@@ -338,7 +338,7 @@
                 <div style="color: var(--color-green); text-decoration: underline; justify-self: end;" onclick="hiddeDatosBancarios()">OCULTAR</div>
         </div>
     </section>
-    <section id="rsvp">
+    <section id="rsvp" style="display: none;">
         <div class="inicio">
             <div class="text-subheader" style="display: flex; align-items: center; border-top: 1px solid var(--color-yellow); margin: 1rem 0; padding-top: 2rem;"><span class="lineh"></span>CONFIRMACIÓN</div>
             <div class="text-header" style="margin-bottom: 1rem;">
@@ -433,7 +433,7 @@
             </form>
         </div>
     </section>
-    <section id="fin">
+    <section id="fin" style="display: none;">
         <div class="fin">
             <div class="text-brush" style="text-align: center; font-size: 3rem; color: var(--color-green);">
                 <span>Tamara</span>
@@ -448,32 +448,34 @@
     </section>
     <script data-cfasync="false" src="js/form-submission-handler.js"></script>
     <script>
-        // const video = document.getElementById("video");
-        // const inicio = document.getElementById("inicio");
-        // const cuenta = document.getElementById("cuenta");
-        // const detalles = document.getElementById("detalles");
-        // const planificacion = document.getElementById("planificacion");
-        // const preguntas = document.getElementById("preguntas");
-        // const regalo = document.getElementById("regalo");
-        // const rsvp = document.getElementById("rsvp");
-        // const fin = document.getElementById("rsvp");
-        // video.addEventListener("click", () => {
-        //     video.play();
-        //     setTimeout(() => {
-        //         video.style.opacity = "0";
-        //         setTimeout(() => {
-        //             video.style.display = "none";
-        //             inicio.style.display = "inherit";
-        //             cuenta.style.display = "inherit";
-        //             detalles.style.display = "inherit";
-        //             planificacion.style.display = "inherit";
-        //             preguntas.style.display = "inherit";
-        //             regalo.style.display = "inherit";
-        //             rsvp.style.display = "inherit";
-        //             fin.style.display = "inherit";
-        //         }, 500);
-        //     }, 1500);
-        // });
+        const video = document.getElementById("video");
+        const inicio = document.getElementById("inicio");
+        const cuenta = document.getElementById("cuenta");
+        const nosotros = document.getElementById("nosotros");
+        const detalles = document.getElementById("detalles");
+        const planificacion = document.getElementById("planificacion");
+        const preguntas = document.getElementById("preguntas");
+        const regalo = document.getElementById("regalo");
+        const rsvp = document.getElementById("rsvp");
+        const fin = document.getElementById("fin");
+        video.addEventListener("click", () => {
+            video.play();
+            setTimeout(() => {
+                video.style.opacity = "0";
+                setTimeout(() => {
+                    video.style.display = "none";
+                    inicio.style.display = "inherit";
+                    cuenta.style.display = "inherit";
+                    nosotros.style.display = "inherit";
+                    detalles.style.display = "inherit";
+                    planificacion.style.display = "inherit";
+                    preguntas.style.display = "inherit";
+                    regalo.style.display = "inherit";
+                    rsvp.style.display = "inherit";
+                    fin.style.display = "inherit";
+                }, 500);
+            }, 1500);
+        });
 
         // CUENTA REGRESIVA
         const dias = document.getElementById("dias");
@@ -601,7 +603,6 @@
                 invitados.appendChild(div);
             }
         }
-
 
         // MOVIMIENTO
         const movimientos = document.querySelectorAll(".movimiento");
